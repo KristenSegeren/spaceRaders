@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\485706__univ_lyon3__marandet_nils_2019_2020_spacestation.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\446142__justinvoke__race-start.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\168352__likeclockwork__eh-crash-drum15.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\323703__reitanna__funny-yay.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\196892__ionicsmusic__race-robot-winner.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
