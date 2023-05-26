@@ -23,7 +23,7 @@ namespace spaceRaders
 
         int ballSpeed = 8;
         int ballSize = 10;
-        SoundPlayer spaceNoise = new SoundPlayer(Properties.Resources.spaceNoise);
+        
         SoundPlayer start = new SoundPlayer(Properties.Resources.start);
         SoundPlayer boom = new SoundPlayer(Properties.Resources.boom);
         SoundPlayer yay = new SoundPlayer(Properties.Resources.yay);
@@ -172,26 +172,22 @@ namespace spaceRaders
                 if (wDown == true && player1.Y > 0)
                 {
                     player1.Y -= playerSpeed;
-                   spaceNoise.Play();
                 }
 
                 if (sDown == true && player1.Y < this.Height - 40 - player1.Height)
                 {
                     player1.Y += playerSpeed;
-                   spaceNoise.Play();
                 }
 
                 //move player 2
                 if (upArrowDown == true && player2.Y > 0)
                 {
                     player2.Y -= playerSpeed;
-                   spaceNoise.Play();
                 }
 
                 if (downArrowDown == true && player2.Y < this.Height - 40 - player2.Height)
                 {
                     player2.Y += playerSpeed;
-                    spaceNoise.Play();
                 }
                 #endregion
 
@@ -202,7 +198,6 @@ namespace spaceRaders
                     {
                         player1.X = 100;
                         player1.Y = 325;
-                        spaceNoise.Stop();
                         boom.Play();
                     }
                 }
@@ -212,7 +207,6 @@ namespace spaceRaders
                     {
                         player1.X = 100;
                         player1.Y = 325;
-                        spaceNoise.Stop();
                         boom.Play();
                     }
                 }
@@ -222,7 +216,6 @@ namespace spaceRaders
                     {
                         player2.X = 400;
                         player2.Y = 325;
-                        spaceNoise.Stop();
                         boom.Play();
                     }
                 }
@@ -232,7 +225,6 @@ namespace spaceRaders
                     {
                         player2.X = 400;
                         player2.Y = 325;
-                        spaceNoise.Stop();
                         boom.Play();
                     }
                 }
@@ -245,7 +237,6 @@ namespace spaceRaders
                     player1Score++;
                     player1.X = 100;
                     player1.Y = 325;
-                    spaceNoise.Stop();
                     yay.Play();
                 }
                 if (player2.Y == 0)
@@ -253,7 +244,6 @@ namespace spaceRaders
                     player2Score++;
                     player2.X = 400;
                     player2.Y = 325;
-                    spaceNoise.Stop();
                     yay.Play();
 
                 }
@@ -275,14 +265,12 @@ namespace spaceRaders
                 {
                     titleLabel.Visible= true;
                     titleLabel.Text = $"Player 1 is the Winner!!";
-                    spaceNoise.Stop();
                     winner.Play();
                 }
                 if (state == "winner" && player2Score == 3)
                 {
                     titleLabel.Visible= true;
                     titleLabel.Text = $"Player 2 is the Winner!!";
-                    spaceNoise.Stop();
                     winner.Play();
                 }
                 #endregion
